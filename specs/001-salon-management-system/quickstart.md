@@ -17,9 +17,10 @@ classroom/demo testing with SQLite.
 cd D:\project\salon_project
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-python -m pip install Django djangorestframework djangorestframework-simplejwt django-filter pytest pytest-django
+python -m pip install -r backend\requirements.txt
 cd backend
 python manage.py migrate
+python manage.py seed_demo_data
 python manage.py createsuperuser
 python manage.py runserver
 ```
