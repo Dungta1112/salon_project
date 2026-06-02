@@ -42,7 +42,7 @@ Thực hiện các lệnh sau trên PowerShell hoặc Terminal để cấu hình
 ### 1. Tạo môi trường ảo và cài đặt thư viện
 ```powershell
 # Di chuyển vào thư mục dự án
-cd D:\project\salon_project
+cd salon_project
 
 # Tạo môi trường ảo python
 python -m venv .venv
