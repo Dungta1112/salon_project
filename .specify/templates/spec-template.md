@@ -92,6 +92,19 @@
 - **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
 - **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
 - **FR-005**: System MUST [behavior, e.g., "log all security events"]
+- **FR-ROLE**: System MUST define which roles may perform each action and what
+  data scope each role may access.
+- **FR-AUDIT**: System MUST record audit history for important business
+  operations and rejected state changes.
+- **FR-HISTORY**: System MUST preserve history or soft-delete critical business
+  records instead of permanently deleting them through normal application flows.
+- **FR-VALIDATION**: System MUST validate business rules and return clear errors
+  before confirming appointments, payments, complaints, or other state changes.
+- **FR-CONSISTENCY**: System MUST keep related customer, employee, service,
+  appointment, invoice, transaction, and complaint data consistent.
+- **FR-ERRORS**: System MUST provide consistent, understandable API or
+  user-facing responses for success, validation, authorization, conflict, and
+  processing failures.
 
 *Example of marking unclear requirements:*
 
@@ -102,6 +115,19 @@
 
 - **[Entity 1]**: [What it represents, key attributes without implementation]
 - **[Entity 2]**: [What it represents, relationships to other entities]
+
+### Authorization, Audit, and Lifecycle *(mandatory for salon workflows)*
+
+- **Roles and Scope**: [Which roles can use this feature and which records each
+  role can see or change]
+- **Audit Events**: [Important actions, rejected changes, and state transitions
+  that must be recorded]
+- **Lifecycle/History**: [Soft-delete, archive, immutable history, or status
+  handling for affected critical records]
+- **Business Rules**: [Appointment conflict checks, payment status transitions,
+  complaint handling workflow, consistency rules, or N/A with rationale]
+- **Error Responses**: [Expected user-facing/API responses for invalid,
+  unauthorized, conflicting, and failed operations]
 
 ## Success Criteria *(mandatory)*
 

@@ -40,7 +40,25 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- **Role Access and Data Scope**: Identify affected roles (Customer,
+  Receptionist, Staff, Manager, or future roles), required permissions, and data
+  scope limits for every workflow, API, report, and background operation.
+- **Auditability**: List important operations that require audit records,
+  including actor, role, affected entity, state changes, timestamp, and rejection
+  reason when applicable.
+- **Historical Data Preservation**: Specify soft-delete, archival, immutable
+  history, or lifecycle-state handling for affected customers, employees,
+  services, appointments, invoices, transactions, and related records.
+- **Business Rule Integrity**: Document validation and consistency checks,
+  especially appointment conflict checks, payment state history, complaint status
+  workflow, and cross-entity consistency.
+- **Maintainability and Extensibility**: Explain how the design supports adding
+  services, promotions, payment methods, or roles without breaking existing
+  behavior. Justify any duplicated authorization, validation, audit, lifecycle,
+  or error-response logic.
+- **Consistent Responses and Errors**: Define user-facing/API response patterns
+  for success, validation failure, authorization failure, conflict, and processing
+  errors.
 
 ## Project Structure
 
