@@ -9,7 +9,7 @@ venv/
 media/
 staticfiles/
 
-# Node / React
+# React / Node
 node_modules/
 dist/
 build/
